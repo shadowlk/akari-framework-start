@@ -1,0 +1,6 @@
+.buildpath
+.project
+.svn
+.settings
+*.lock
+log/*
