@@ -1,0 +1,10 @@
+Options -Indexes
+
+RewriteEngine on
+RewriteRule ^data/(.*)$ index.php/404 [NC,R=404]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteCond $1 !^(index\.php|static|robots\.txt)
+RewriteRule ^(.*)$ index.php/$1 [QSA,PT,L]
